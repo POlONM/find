@@ -6,6 +6,15 @@ package org.spbstu.polonskij;
 import java.io.File;
 import java.util.Scanner;
 
+/**
+ *Search for a file with the name specified in the command line in the specified directory
+ * Options:
+ * -d directory option, by default in the current directory
+ * -r switch indicates the need to search in all subdirectories
+ * Example of command line:
+ *  "find -r -d C://directory filename.txt"
+ *  Returns the path or list of paths for the specified file
+ */
 public class Find {
     public static void main(String[] args) {
         String input;
@@ -31,5 +40,6 @@ public class Find {
         } catch (Exception ex) {
             System.err.println(ex.getMessage());
         }
+
     }
 }

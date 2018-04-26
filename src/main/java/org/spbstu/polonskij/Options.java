@@ -4,6 +4,12 @@ import java.io.File;
 import java.util.ArrayList;
 
 public class Options {
+
+    /**
+     * @param dir directory
+     * @param fileName wanted file name
+     * @return the path of the search file in the specified directory and its subdirectories
+     */
     public ArrayList<String> searchFile(File dir, String fileName) {
 
         ArrayList<String> result = new ArrayList<String>();
@@ -22,11 +28,27 @@ public class Options {
         return result;
     }
 
+    /**
+     * @param dir diiectory
+     * @param fileName wanted file name
+     * @return the path of the search file in the specified directory
+     */
     public String getFile(File dir, String fileName) {
         for (File file : dir.listFiles()) {
             if (file.getName().equals(fileName))
                 return file.getAbsolutePath();
         }
         return null;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
     }
 }
