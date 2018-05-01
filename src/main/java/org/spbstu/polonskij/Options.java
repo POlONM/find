@@ -2,11 +2,10 @@ package org.spbstu.polonskij;
 
 import java.io.File;
 import java.util.ArrayList;
-
 public class Options {
 
     /**
-     * @param dir directory
+     * @param dir      directory
      * @param fileName wanted file name
      * @return the path of the search file in the specified directory and its subdirectories
      */
@@ -29,7 +28,7 @@ public class Options {
     }
 
     /**
-     * @param dir diiectory
+     * @param dir      diiectory
      * @param fileName wanted file name
      * @return the path of the search file in the specified directory
      */
@@ -39,16 +38,5 @@ public class Options {
                 return file.getAbsolutePath();
         }
         return null;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-
-    }
-
-    @Override
-    public int hashCode() {
-        return super.hashCode();
     }
 }

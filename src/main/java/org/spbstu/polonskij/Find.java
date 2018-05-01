@@ -16,7 +16,7 @@ import java.util.Scanner;
  *  Returns the path or list of paths for the specified file
  */
 public class Find {
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         String input;
         String[] cmdLine;
         String filename;
