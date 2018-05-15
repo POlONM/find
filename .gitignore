@@ -24,8 +24,7 @@
 hs_err_pid*
 
 .gitignore
-files
 .idea
 src/main/resources/
 target/
-src/test/
+

@@ -2,6 +2,7 @@ package org.spbstu.polonskij;
 
 import java.io.File;
 import java.util.ArrayList;
+
 public class Options {
 
     /**
@@ -17,7 +18,7 @@ public class Options {
 
             File[] paths = dir.listFiles();
 
-            for (File path : paths) {
+            for (File path : paths != null ? paths : new File[0]) {
                 result.addAll(this.searchFile(path, fileName));
             }
         } else {
