@@ -18,11 +18,10 @@ public class Options {
         Path directory = Paths.get(dir.toString());
         final String fileNameToFind = fileName;
 
-
         try {
             Files.walkFileTree(directory, new SimpleFileVisitor<Path>() {
                 public FileVisitResult visitFile(Path path, BasicFileAttributes fileAttributes) {
-                    if (path.toFile().getName().equals(fileNameToFind) || path.getFileName().equals(fileName)) {
+                    if (path.toFile().getName().equals(fileNameToFind)) {
                         list.add(path.toString());
                         return FileVisitResult.CONTINUE;
                     }
