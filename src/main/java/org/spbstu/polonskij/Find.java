@@ -46,7 +46,6 @@ public class Find {
 
         ArrayList<String> result = r ? activity.searchFile(new File(d), fileName) : activity.getFile(new File(d), fileName);
 
-        if(result.isEmpty()) System.err.println("File not found :(");
-           return result;
+        return result;
     }
 }
