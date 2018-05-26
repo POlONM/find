@@ -1,5 +1,6 @@
+package org.spbstu.polonskij;
+
 import org.junit.Test;
-import org.spbstu.polonskij.Options;
 
 import java.io.File;
 import java.util.ArrayList;
