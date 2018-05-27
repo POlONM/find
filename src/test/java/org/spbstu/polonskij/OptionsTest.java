@@ -14,16 +14,16 @@ public class OptionsTest {
     @Test
     public void searchFile() throws Exception {
         ArrayList<String> list = new ArrayList<String>();
-        list.add("src\\test\\java\\files\\hello.txt");
-        list.add("src\\test\\java\\files\\home\\hello.txt");
+        list.add("src\\test\\resources\\files\\hello.txt");
+        list.add("src\\test\\resources\\files\\home\\hello.txt");
         assertEquals(list, options.searchFile(new File("src"), "hello.txt"));
     }
 
     @Test
     public void searchFile2() throws Exception {
         ArrayList<String> list = new ArrayList<String>();
-        list.add("src\\test\\java\\files\\house.txt");
-        assertEquals(list, options.searchFile(new File("src\\test\\java\\files"), "house.txt"));
+        list.add("src\\test\\resources\\files\\house.txt");
+        assertEquals(list, options.searchFile(new File("src\\test\\resources\\files"), "house.txt"));
     }
 
     @Test
@@ -39,23 +39,23 @@ public class OptionsTest {
     @Test
     public void getFile() throws Exception {
         ArrayList<String> list = new ArrayList<String>();
-        list.add("src\\test\\java\\files\\home\\hello.txt");
+        list.add("src\\test\\resources\\files\\home\\hello.txt");
         assertEquals(list,
-                options.getFile(new File("src\\test\\java\\files\\home"), "hello.txt"));
+                options.getFile(new File("src\\test\\resources\\files\\home"), "hello.txt"));
     }
 
     @Test
     public void getFile2() throws Exception {
         ArrayList<String> list = new ArrayList<String>();
-        list.add("src\\test\\java\\files\\house.txt");
+        list.add("src\\test\\resources\\files\\house.txt");
         assertEquals(list,
-                options.getFile(new File("src\\test\\java\\files"), "house.txt"));
+                options.getFile(new File("src\\test\\resources\\files"), "house.txt"));
     }
 
     @Test
     public void fileNotFound2() {
         try {
-            Options.searchFile(new File("src\\test\\java\\files\\home"), "mom.txt");
+            Options.searchFile(new File("src\\test\\resources\\files\\home"), "mom.txt");
             assertTrue(false);
         } catch (Exception ex) {
         }
